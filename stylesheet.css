@@ -1,0 +1,361 @@
+body {
+  margin: 0;
+  padding: 0;
+  /*background-image: url(images/back.png);*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #00181c;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2', sans-serif;
+}
+#Logo{
+  background-image: url(images/back.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 50%;
+  height: 40%;
+  width: 100%;
+  transform: translateX(-50%) scaleX(.7) scaleY(.7);
+
+}
+li {
+    text-decoration: none;
+    list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/*PAGES*/
+#intro{
+  margin-top: 5%;
+  text-align: center;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
+.trigger{
+    background-color: #00181c;
+    position: absolute;
+    left: 50%;
+    bottom: 40;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    width: 10%;
+    transform: translateX(-50%) scaleX(.9) scaleY(.9);
+    border: none;
+}
+.trigger:hover{
+  color: #800020;
+}
+#overlay{
+  display: none;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	z-index:1001;
+}
+.fade-in {
+  text-align: center;
+  font-size: 50px;
+  color: #00181c;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+@keyframes fadeInOpacity {
+  0%
+  {
+    opacity: 0;
+  }
+  100%
+  {
+    opacity: 1;
+  }
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 300%;
+  top: 0;
+  overflow: hidden;
+  /*background-color:rgba(128,128,128,0.9);*/
+  background-color: white;
+  transition: all 1s;
+  scroll-behavior: smooth;
+}
+.slider.close {
+  top: 100vh;
+  height: 0;
+}
+#closeSymbol{
+  font-size: 50px;
+  font-family: 'Raleway', sans-serif;
+  color: grey;
+  width: 5%;
+}
+#closeSymbol:hover{
+  color: black;
+  cursor: pointer;
+}
+/*.connector{
+  border: solid 1px #00181c;
+ text-decoration : none;
+ padding : 4px;
+  content:'';
+  padding : 4px;
+  width:30%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50%;
+	border-radius: 10px;
+	transition: all 0.5s ease;
+}
+.connector:hover {
+width: 40%;
+}
+
+
+*/
+
+/*===========================================================*/
+/*TRYING SOMETHING NEW
+=============================================================*/
+
+#me{
+  height: 20%;
+  width: 25%;
+  /*border: solid green 1px;*/
+  float: right;
+  background-image: url(images/face.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+}
+#about{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+}
+#aboutme{
+  font-size: 20px;
+  width: 50%;
+  text-align: center;
+  margin-left: 10%;
+}
+#projects{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+}
+#contact{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+}
+#LineBreak1{
+  display: block;
+  height: 1px;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%;
+  border: 0;
+  border-top: 1px solid #37FDFC;
+  opacity: 0.6;
+}
+#LineBreak2{
+  display: block;
+  height: 1px;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 40%;
+  border: 0;
+  border-top: 1px solid #37FDFC;
+  opacity: 0.6;
+}
+/*============================================================
+                          Work
+===========================================================*/
+#mywrk{
+  margin-top: 5%;
+}
+#Left{
+  width: 25%;
+  height: 20%;
+  border: 1px solid #00181c;
+  position: absolute;
+  margin-left: 5%;
+  transition: all 1s ease-in-out;
+}
+#Left:hover{
+  border: 1px solid #37FDFC;
+  transform: scale(1.1);
+}
+
+#middle{
+  width: 25%;
+  height: 20%;
+  border: 1px solid #00181c;
+  position: absolute;
+  margin-left: 37.5%;
+  transition: all 1s ease-in-out;
+}
+#middle:hover{
+  border: 1px solid #37FDFC;
+  transform: scale(1.1);
+}
+#right{
+  width: 25%;
+  height: 20%;
+  border: 1px solid #00181c;
+  position: absolute;
+  margin-left: 70%;
+  transition: all 1s ease-in-out;
+}
+#right:hover{
+  border: 1px solid #37FDFC;
+  transform: scale(1.1);
+}
+
+/*============================================================
+Contact form stuff
+===========================================================*/
+
+.modal-box {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  width: 98%;
+  background: white;
+  border-bottom: 1px solid #aaa;
+  border-radius: 4px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-clip: padding-box;
+}
+
+.modal-box header,
+.modal-box .modal-header {
+  padding: 1.25em 1.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-box header h3,
+.modal-box header h4,
+.modal-box .modal-header h3,
+.modal-box .modal-header h4 { margin: 0; }
+
+.modal-box .modal-body { padding: 2em 1.5em; }
+
+.modal-box footer,
+.modal-box .modal-footer {
+  padding: 1em;
+  border-top: 1px solid #ddd;
+  background: rgba(0, 0, 0, 0.02);
+  text-align: right;
+}
+
+.modal-overlay {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+a.close {
+  line-height: 1;
+  font-size: 1.5em;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  text-decoration: none;
+  color: #bbb;
+}
+
+a.close:hover {
+  color: #222;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  transition: color 1s ease;
+}
+
+@media (min-width: 32em) {
+  .modal-box { width: 70%; }
+}
+
+/*============================================================
+use this to adjust stuff for smaller screens
+===========================================================*/
+@media only screen and (max-width: 500px) {
+    #me {
+        background-color: #00181c;
+        width: 100%;
+        height: 10%;
+        margin-top: -10%;
+    }
+  #aboutme{
+    font-size: 15px;
+    width: 80%;
+  }
+  #about{
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+  }
+  .slider {
+    position: absolute;
+    width: 100%;
+    height: 400%;
+    top: 0;
+    overflow: hidden;
+    /*background-color:rgba(128,128,128,0.9);*/
+    background-color: white;
+    transition: all 1s;
+    scroll-behavior: smooth;
+  }
+  #Left{
+    width: 90%;
+    height: 15%;
+    margin-top: -10%;
+    border: 1px solid #00181c;
+    transition: all 1s ease-in-out;
+  }
+  #middle{
+    width: 90%;
+    height: 15%;
+    margin-top: 100%;
+    margin-left: 5%;
+    border: 1px solid #00181c;
+    transition: all 1s ease-in-out;
+  }
+  #right{
+    width: 90%;
+    height: 15%;
+    margin-top: 210%;
+    margin-left: 5%;
+    border: 1px solid #00181c;
+    transition: all 1s ease-in-out;
+  }
+}
